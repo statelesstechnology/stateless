@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <link rel="stylesheet" href="./assets/css/index.css">
+
+  <title>Stateless Technology</title>
+
+  <!-- Vue.js -->
+  <script src="res/vue@2.6.12.js"></script>
+
+</head>
+
+<body>
+  <div id="vue-app">
+  <div class="origin">
+      <div class="stateless-content content">
+          <div class="content-header">
+              <div class="header-desktop">
+                  
+              </div>
+              <div class="header-mobile">
+                  <div class="mobile-nav">
+                      <div class="nav-content">
+                          <a href="./">
+                            <img width="200" class="logo" src="./assets/img/logo.jpg" alt="stateless logo" />
+                            <h3>{{appTitle}}</h3>
+                          </a>
+                          <div class="nav-toggle">
+                              <img class="toggle-open" id="toggle-open" src="./assets/img/menu.svg" alt="Toggle Open" onclick="return ToggleNavOpen();" />
+                              <img class="toggle-open" id="toggle-close" src="./assets/img/close.svg" alt="Toggle Close" onclick="return ToggleNavClose();"/>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="nav-items" id="nav-items">
+                      <ul class="nav-list">
+                          <li>
+                              <a class="whoweare" href="./who">WHO WE ARE</a>
+                          </li>
+                          <li class="drop-list" >
+                              <p onclick="return SolutionToggle();">SOLUTIONS 
+                                <span class="expand" id="solution-expand">+</span>
+                                <span class="expand" id="solution-collapse">—</span>
+                              </p>
+                              <div class="solution-subnav" id="solution-subnav">
+                                  <a class="subnav" href="#">Stateless Teleportation</a>
+                                  <a class="subnav" href="#">Stateless Cryptography</a>
+                                  <a class="subnav" href="#">UTTP</a>
+                                  <a class="subnav" href="#">Stateless dot</a>
+                                  <a class="subnav" href="#">Stateless optics</a>
+                                  <a class="subnav" href="#">Qubitnary</a>
+                                  <a class="subnav" href="#">Sateless mechnics</a>
+                                  <a class="subnav" href="#">SIT</a>
+                                  <a class="subnav" href="#">SQC</a>
+                              </div>
+                          </li>
+                          <li class="drop-list">
+                              <p onclick="return ProductToggle();">OUR PRODUCTS 
+                                <span class="expand" id="product-expand">+</span>
+                                <span class="expand" id="product-collapse">—</span>
+                              </p>
+                              <div class="product-subnav" id="product-subnav">
+                                  <a class="subnav" href="#">Sybat Network</a>
+                                  <a class="subnav" href="#">Dovona Lang.</a>
+                                  <a class="subnav" href="#">Wavebed IDE</a>
+                                  <a class="subnav" href="#">Sowpal AI</a>
+                                  <a class="subnav" href="#">Thurd-III</a>
+                              </div>
+                          </li>
+                          <li>
+                              <a class="learn" href="./learn">LEARN</a>
+                          </li>
+                          <li>
+                              <a class="careers" href="./careers">CAREERS</a>
+                          </li>
+                          <li>
+                              <a class="contact" href="mailto:antimonyiq@gmail.com">CONTACT US</a>
+                          </li>
+                          <li class="social">
+                              <div class="social-links">
+                                  <a class="twitter" href="https://twitter.com/stateless_tech"><img class="media" src="./assets/img/twitter.svg" alt="Twitter" /></a>
+                                  <a class="instagram" href="#"><img class="media" src="./assets/img/instagram.svg" alt="Instagram" /></a>
+                                  <a class="medium" href="#"><img class="media" src="./assets/img/medium.svg" alt="Medium" /></a>
+                                  <a class="GitHub" href="https://github.com/statelesstechnology"><img class="media" src="./assets/img/github.svg" alt="GitHub" /></a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          <div class="content-body section1" oncontextmenu="return false;">
+              <div class="section1-heading">
+                  <h1 class="heading-caption">{{heading}}</h1>
+              </div>
+              <div class="heading-paragraph">
+                  <p>{{headingParagraph}}</p>
+              </div>
+              <div class="heading-image">
+                  <img width="366" height="435" class="gifs" src="./assets/img/unit-qubit.png" alt="gif" />
+              </div>
+              <div class="heading-equation">
+                  <h3>{{singleState}}</h3>
+              </div>
+          </div>
+          <div class="content-app section2">
+             <div class="section2 app1">
+                 <div class="app1-dovona">
+                     <div class="card" id="card-view">
+                         <div class="card-image">
+                             
+                         </div>
+                         <div class="card-context">
+                             <div class="card-title">
+                                 <h4>{{CardTitle}}</h4>
+                             </div>
+                             <div class="card-text">
+                                 {{CardText}}
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+          </div>
+      </div>
+      
+      <div class="content-footer section3">
+          <div class="footer-nav">
+              <div class="nav-first">
+                  <p>LEARN</p>
+                  <ul class="first-list learn">
+                      <li><a href="#">Research</a></li>
+                      <li><a href="#">Documentation</a></li>
+                      <li><a href="#">Reports</a></li>
+                      <li><a href="#">Libraries</a></li>
+                      <li><a href="#">Blog</a></li>
+                  </ul>
+              </div>
+              <div class="nav-first">
+                  <p>NEW PRODUCTS</p>
+                  <ul class="first-list learn">
+                      <li><a href="https://sybat.network">Sybat Network</a></li>
+                      <li><a href="#">Dovona Lang.</a></li>
+                      <li><a href="#">Wavebed IDE</a></li>
+                      <li><a href="#">Sowpal AI</a></li>
+                      <li><a href="#">Thurd-III</a></li>
+                  </ul>
+              </div>
+              <div class="nav-first">
+                <p>INDUSTRIES</p>
+                <ul class="first-list learn">
+                    <li><a href="#">Qubit Mathematics</a></li>
+                    <li><a href="#">Software Engineering</a></li>
+                    <li><a href="#">Aeronautics Engineering</a></li>
+                    <li><a href="#">Financial Markets</a></li>
+                    <li><a href="#">Agricultural Engineering</a></li>
+                    <li><a href="#">Infrastructure Engineering</a></li>
+                    <li><a href="#">Chemical Engineering</a></li>
+                    <li><a href="#">BioTechnology</a></li>
+                    <li><a href="#">Cyber Security</a></li>
+                    <li><a href="#">Material Engineering</a></li>
+                </ul>
+              </div>
+              <div class="nav-first">
+                  <p>LEGAL</p>
+                  <ul class="first-list learn">
+                      <li><a href="#">Terms of use</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Code of conduct</a></li>
+                      <li><a href="#">Audit Report</a></li>
+                  </ul>
+              </div>
+          </div>
+          <div class="footer-conclusion">
+              <p class="copyright" id="copyright"></p>
+          </div>
+      </div>
+    
+    
+  </div>
+</div>
+  <!-- Project -->
+  <script src="app.js"></script>
+  <script src="./assets/js/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
